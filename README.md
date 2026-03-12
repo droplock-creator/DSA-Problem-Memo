@@ -1,0 +1,3 @@
+Hello!! This is Deepesh and this repository stores problems that I have solved in my DSA journey from the most basic problems and this will be a regularly updated repository (I'll try my best to uphold this 😣) from the point it becomes a public repo.
+
+This repo will act as a reference and revision tool for me to keep my skills sharpened and to reference back to old challenges to help overcome new ones.
