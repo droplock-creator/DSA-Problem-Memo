@@ -1,5 +1,7 @@
 //Remove characters from first string that are present in second string.First is always larger than second.1<=str<=50
-#include<bits/stdc++.h>
+
+#include<vector>
+#include<string>
 #include<iostream>
 using namespace std;
 class Solution {
