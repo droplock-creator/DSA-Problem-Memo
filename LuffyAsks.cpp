@@ -6,6 +6,7 @@ English alphabet of length N and two Integers L and R he wants to know whether a
 to R (L and R included) can be rearranged to form a palindrome or not. He wants to know this for Q values of L and R and
 needs your help in finding the answer.
 Palindrome is a string of characters which when reversed reads same as the original String.
+
 CONSTRAINTS :
 
 1 ≤ t ≤ 10
@@ -43,9 +44,7 @@ int main(){
         vector<vector<int>> Count(n+1,vector<int>(26,0));
         Count[1][s[0]-'a']++;
         for (int i = 2; i < n+1; i++){
-            for (int j = 0; j < 26; j++){
-                Count[i][j] = Count[i-1][j];
-            }
+            Count[i] = Count[i-1];
             Count[i][s[i-1]-'a']++;
         }
         while(q--){
