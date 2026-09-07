@@ -19,7 +19,7 @@ long long binMultiply(long long a, long long b, long long m){
 
 long long F(int n,long long &ss, long long &s, long long m){
     long long x;
-    x = ( (n*ss) % m - binMultiply(s%m,s%m,m) + m ) % m;
+    x = ( (n*ss) % m - binMultiply(s,s,m) + m ) % m;
     return x;
 }
 
@@ -49,8 +49,8 @@ int main(){
                 cin >> x >> v;
                 x--;
                 s = s - nums[x] + v;
-                ss = (ss - binMultiply(nums[x]%m,nums[x]%m,m) + m ) % m;
-                ss = (ss + (v*v % m) ) % m;
+                ss = (ss - binMultiply(nums[x],nums[x],m) + m ) % m;
+                ss = (ss + binMultiply(v,v,m) ) % m;
                 nums[x] = v;
 
             }
@@ -59,8 +59,8 @@ int main(){
                 cin >> x >> v;
                 x--;
                 s = s + v;
-                ss = (ss - binMultiply(nums[x]%m,nums[x]%m,m) + m ) % m;
-                ss = (ss + binMultiply(((nums[x] % m)+v)%m,((nums[x] % m)+v)%m,m) ) % m;
+                ss = (ss - binMultiply(nums[x],nums[x],m) + m ) % m;
+                ss = (ss + binMultiply(nums[x]+v,nums[x]+v,m) ) % m;
                 nums[x] += v;
             }
             else{
@@ -71,7 +71,3 @@ int main(){
 }
 
 
-/* 
-    Since max value of "s" can be 10^14 thus binMultiply(s,s,m) can take upto 47 iterations in worst case thus making total query's
-    worst-case iteration upto 5 * 10^7 that may give TLE 
-*/
