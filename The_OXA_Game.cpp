@@ -1,3 +1,5 @@
+// Link to question: https://www.hackerearth.com/problem/algorithm/the-game-of-oxa-bb3d2676/
+
 #include<iostream>
 #include<vector>
 #include<algorithm>
