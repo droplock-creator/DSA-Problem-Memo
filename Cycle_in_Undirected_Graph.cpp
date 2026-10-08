@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void dfs(int v,int u,vector<bool>&V,vector<vector<int>> &g,bool &f){
+void dfs(int v,int u,vector<bool>&V,const vector<vector<int>> &g,bool &f){
     V[v] = true;
     for(int i=0;i<g[v].size();i++){
         if(f){
