@@ -14,6 +14,7 @@ void bfs(vector<vector<int>> &g, int a,int b, vector<vector<bool>> &v){
     while(!q.empty()){
         int i = q.front().first;
         int j = q.front().second;
+        q.pop();
         int x[]={2,2,1,-1,-2,-2,-1,1};
         int y[]={-1,1,2,2,1,-1,-2,-2};
         for(int k=0;k<8;k++){
